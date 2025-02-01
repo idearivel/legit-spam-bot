@@ -68,7 +68,7 @@ try:
                 print(Fore.GREEN + 'СООБЩЕНИЕ Отправлено [', messages_send,'/',messages_count,']' + Style.RESET_ALL)
                 
                 logs_text = f"[{current_time}] [{windows}] [{local_ip}] SPAM COMPLETED [{messages_send}/{messages_count}]"
-                with open(logs_file, "w") as file:
+                with open(logs_file, "a") as file:
                     file.write(logs_text + '\n' + f'VERSION: {venom_version}')
                 if k.is_pressed('alt'):
                     break
